@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Mist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar top">
+        <span>Memory Mist</span>
+    </div>
+
+    <button class="top-left-button" onclick="toggleOverlay()">
+        <img src="open-overlay-icon.png" alt="Open Overlay">
+    </button>
+
+        <!-- Your content goes here -->
+    <h1 style="color: cyan;">Page 1</h1>
+   <p style="color: lightgreen;">Puzzle: You see a fork in the road with two paths. Left and Right.</p> 
+   <p>Instructions:</p>
+   <ol type="i">
+       <li>If you go Left, remember to pick Left on Page 4.</li>
+       <li>If you go Right, you have to pick Right on Page 7.</li>
+   </ol>
+   <nav>
+       <a href="page2.html"><button type="submit">Left</button></a>
+       <a href="page3.html"><button type="submit">Right</button></a>
+   </nav>
+   <!-- ends here -->
+</div>
+    <div class="navbar bottom">
+        <img src="home-icon.png" alt="Home" onclick="location.href='index.html'">
+        <img src="save-icon.png" alt="Save" onclick="copyLinkToClipboard()">
+
+        <img src="hint-icon.png" alt="hint" onclick="hintButtonButNot()"/>
+    </div>
+<div id="overlay" class="overlay">
+        <button class="close-button" onclick="toggleOverlay()">
+            <img src="close-icon.png" alt="Close">
+        </button>
+        <ul>
+            <li><a href="Intro.html">Human Verification puzzle</a></li>
+            <li><a href="start.html">4 different paths</a></li>
+            <li><a href="about.html">About us</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

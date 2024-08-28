@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Mist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar top">
+        <span>Memory Mist</span>
+    </div>
+
+    <button class="top-left-button" onclick="toggleOverlay()">
+        <img src="open-overlay-icon.png" alt="Open Overlay">
+    </button>
+        <!-- Your content goes here -->
+    <script>
+window.onload = function() {
+    setTimeout(function() {
+        playAudio();
+    }, 3000);
+}
+
+function playAudio() {
+    var audio = document.getElementById('myAudio');
+    audio.play().catch(function(error) {
+        console.log("Autoplay was prevented. Interaction is required.");
+    }); 
+}
+    </script>
+    
+    <h1 style="color: lightgreen; font-size: 30;">Lost Memory</h1>
+    <h2 style="color: red;">1/3</h2><br />
+        <audio id="myAudio">
+        <source src="voice1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button id="playButton" onclick="playAudio()">Play Audio</button>
+    <p style="color: White;"> 
+My name is Jason. At least, that's what they tell me. I have a wife, Emma, and two beautiful children, Lily and Max. They are my world now, even though I don't remember how we became a family. My story is a patchwork of memories, some mine, some told to me by others. </p>
+<br />
+<p style="color: White;">
+Years ago, I was in a car accident that left me in a coma. While I lay unconscious, my parents passed away. The doctors said it was natural causes, but the timing felt like a cruel twist of fate. I was their only child, and they died without me ever knowing, without a chance to say goodbye. </p>
+<br />
+<p style="color: white;">
+When I woke from the coma, the world I returned to was unrecognizable. My parents were gone, and the grief I felt was overwhelming. It was as if a part of me had died with them. The depression was deep, a dark abyss that I couldn't escape. One night, in a moment of utter despair, I tried to end my life. But Emma found me just in time.
+</p>
+<a href="lostmemory2.html"><button type="submit">Next</button></a>
+    <!-- ends here -->
+</div>
+    <div class="navbar bottom">
+        <img src="home-icon.png" alt="Home" onclick="location.href='index.html'">
+        <img src="save-icon.png" alt="Save" onclick="copyLinkToClipboard()">
+        <img src="hint-icon.png" alt="hint" onclick="hintAlert()"/>
+    </div>
+</script>
+    <div id="overlay" class="overlay">
+        <button class="close-button" onclick="toggleOverlay()">
+            <img src="close-icon.png" alt="Close">
+        </button>
+        <ul>
+            <li><a href="Intro.html">Human Verification puzzle</a></li>
+            <li><a href="start.html">4 different paths</a></li>
+            <li><a href="about.html">About us</a></li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

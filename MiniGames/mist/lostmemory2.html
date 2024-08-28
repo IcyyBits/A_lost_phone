@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Mist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar top">
+        <span>Memory Mist</span>
+    </div>
+
+    <button class="top-left-button" onclick="toggleOverlay()">
+        <img src="open-overlay-icon.png" alt="Open Overlay">
+    </button>
+        <!-- Your content goes here -->
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                playAudio();
+            }, 3000);
+        }
+
+        function playAudio() {
+            var audio = document.getElementById('myAudio');
+            audio.play().catch(function(error) {
+                console.log("Autoplay was prevented. Interaction is required.");
+            });
+        }
+    </script>
+    <h1 style="color: lightgreen; font-size: 30;">Losy Memory</h1>
+    <h2 style="color: red">2/3</h2>
+        <audio id="myAudio">
+        <source src="voice2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button id="playButton" onclick="playAudio()">Play Audio</button>
+<p style="color: white;">She saved me, but the attempt left a scar deeper than any physical wound. When I awoke in the hospital, I realized I had lost my memory. Faces, names, events—they were all blank spaces in my mind. The doctors called it dissociative amnesia, a condition brought on by the trauma and emotional turmoil. </p>
+<p style="color: white;">
+Emma became my anchor in this sea of confusion. She told me about our life together, about our love story that began in college, the birth of our children, the small joys, and the challenges we faced. She showed me photos and videos, hoping to trigger some recollection. Sometimes, a faint spark of familiarity would flicker, but it was never enough. </p>
+<p style="color: white;">
+Lily and Max were resilient. They didn't understand why their daddy was different, why he sometimes looked at them with a stranger's eyes. But they loved me unconditionally. Their laughter became my solace, their hugs my lifeline. </p>
+ <a href="lostmemory3.html"><button type="submit">Next</button></a>
+    <!-- ends here -->
+</div>
+    <div class="navbar bottom">
+        <img src="home-icon.png" alt="Home" onclick="location.href='index.html'">
+        <img src="save-icon.png" alt="Save" onclick="copyLinkToClipboard()">
+        <img src="hint-icon.png" alt="hint" onclick="hintAlert()"/>
+    </div>
+</script>
+    <div id="overlay" class="overlay">
+        <button class="close-button" onclick="toggleOverlay()">
+            <img src="close-icon.png" alt="Close">
+        </button>
+        <ul>
+            <li><a href="Intro.html">Human Verification puzzle</a></li>
+            <li><a href="start.html">4 different paths</a></li>
+            <li><a href="about.html">About us</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
