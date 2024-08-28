@@ -2,7 +2,7 @@
 
 A small project made by IcyyBits. 📖 
 -
-click <a herf="icyybits.github.io/A_lost_phone">here</a> to run the page
+click [here](https://icyybits.github.io/A_lost_phone) to run the page
 
 So what is this project about and why it's called a lost phone? 📱 
 Well I have the answers for that (of course I do, I made it, so duh 🫠)
