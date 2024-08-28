@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title></title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="navbar">
+        <div>
+    <p>9:26pm</p>
+    <span class="navRight"><img class="wifi" src="icons/wifi.png" /></span>
+    <span class="navRight"><img class="battery" src="icons/battery.png" /></span>
+        </div>
+    </div>
+<!-- your code goes here -->
+
+<div class="date">
+    <h1>Wednesday</h1>
+  </div>
+<div class="weather">
+    <p>Clowdy, might rain tonignt</p>
+  </div>
+<div class="music-player">
+<audio loop id="audio" src="audio/inSlowMotion.mp3"></audio>
+        <button id="playPauseBtn" onclick="togglePlayPause()">Music</button>
+</div>
+<!-- all popups -->
+
+<div id="phonewindow" class="phonePopup">
+<div class="phone-content">
+    <img class="close" onclick="closebutton()" src="icons/back.png" />
+<div class="contacts">
+    
+<div><p onclick="openMomInfo()" class="contactnames">Mom</p><p class="contacttimes">Today</p></div>
+<div><p onclick="openDadInfo()" class="contactnames">Dad</p><p class="contacttimes">Today</p></div>
+<div><p onclick="openLilyInfo()" class="contactnames">Lily</p><p class="contacttimes">Today</p></div>
+<div><p onclick="openEmmaInfo()" class="contactnames">Emma</p><p class="contacttimes">Today</p></div>
+<div><p onclick="openMaxInfo()" class="contactnames">Max</p><p class="contacttimes">Yesterday</p></div>
+<div><p onclick="openDoverInfo()" class="contactnames">Mr. Dover</p><p class="contacttimes">Yesterday</p></div>
+
+   <p class="errorbottom">An unexpected error occured</p>
+           <!-- contact info here -->  
+           <!-- mom -->
+    <div id="momInfo" class="contactinfo">
+        <div class="popup-content">
+    <img class="closecontact" onclick="closeMomInfo()" src="icons/back.png" />
+    
+<div class="contactPicHolder"><img class="contactpic" src="icons/mom.png" /></div>
+  <div class="nameUnderPic">
+      Mom
+  </div>
+  <div class="contactnumber">
+      Private Number
+  </div>
+  <div class="underNumber">
+    <p onclick="simIssue()">Call</p>
+  </div>
+        </div>
+    </div>
+    
+<div id="callerrorid" class="callerror">
+    <p>Please insert a SIM card</p>
+    <img onclick="closeCallIssue()" src="icons/back.png" />
+</div>
+             <!-- dad -->
+    <div id="dadInfo" class="contactinfo">
+        <div class="popup-content">
+    <img class="closecontact" onclick="closeDadInfo()" src="icons/back.png" />
+    
+<div class="contactPicHolder"><img class="contactpic" src="icons/dad.png" /></div>
+  <div class="nameUnderPic">
+      Dad
+  </div>
+  <div class="contactnumber">
+      Private Number
+  </div>
+  <div class="underNumber">
+    <p onclick="simIssue()">Call</p>
+  </div>
+        </div>
+    </div>
+    
+<div id="callerrorid" class="callerror">
+    <p>Please insert a SIM card</p>
+    <img onclick="closeCallIssue()" src="icons/back.png" />
+</div>
+              <!-- lily -->
+    <div id="lilyInfo" class="contactinfo">
+        <div class="popup-content">
+    <img class="closecontact" onclick="closeLilyInfo()" src="icons/back.png" />
+    
+<div class="contactPicHolder"><img class="contactpic" src="icons/lily.png" /></div>
+  <div class="nameUnderPic">
+      Lily
+  </div>
+  <div class="contactnumber">
+      Private Number
+  </div>
+  <div class="underNumber">
+    <p onclick="simIssue()">Call</p>
+  </div>
+        </div>
+    </div>
+    
+<div id="callerrorid" class="callerror">
+    <p>Please insert a SIM card</p>
+    <img onclick="closeCallIssue()" src="icons/back.png" />
+</div>
+              <!-- emma -->
+    <div id="emmaInfo" class="contactinfo">
+        <div class="popup-content">
+    <img class="closecontact" onclick="closeEmmaInfo()" src="icons/back.png" />
+    
+<div class="contactPicHolder"><img class="contactpic" src="icons/emma.png" /></div>
+  <div class="nameUnderPic">
+      Emma
+  </div>
+  <div class="contactnumber">
+      Private Number
+  </div>
+  <div class="underNumber">
+    <p onclick="simIssue()">Call</p>
+  </div>
+        </div>
+    </div>
+    
+<div id="callerrorid" class="callerror">
+    <p>Please insert a SIM card</p>
+    <img onclick="closeCallIssue()" src="icons/back.png" />
+</div>
+              <!-- max -->
+    <div id="maxInfo" class="contactinfo">
+        <div class="popup-content">
+    <img class="closecontact" onclick="closeMaxInfo()" src="icons/back.png" />
+    
+<div class="contactPicHolder"><img class="contactpic" src="icons/max.png" /></div>
+  <div class="nameUnderPic">
+      Max
+  </div>
+  <div class="contactnumber">
+      Private Number
+  </div>
+  <div class="underNumber">
+    <p onclick="simIssue()">Call</p>
+  </div>
+        </div>
+    </div>
+    
+<div id="callerrorid" class="callerror">
+    <p>Please insert a SIM card</p>
+    <img onclick="closeCallIssue()" src="icons/back.png" />
+</div>
+              <!-- Dover -->
+    <div id="doverInfo" class="contactinfo">
+        <div class="popup-content">
+    <img class="closecontact" onclick="closeDoverInfo()" src="icons/back.png" />
+    
+<div class="contactPicHolder"><img class="contactpic" src="icons/dover.png" /></div>
+  <div class="nameUnderPic">
+      Mr. Dover
+  </div>
+  <div class="contactnumber">
+      Private Number
+  </div>
+  <div class="underNumber">
+    <p onclick="simIssue()">Call</p>
+  </div>
+        </div>
+    </div>
+    
+<div id="callerrorid" class="callerror">
+    <p>Please insert a SIM card</p>
+    <img onclick="closeCallIssue()" src="icons/back.png" />
+</div>
+
+
+  </div>
+  </div>
+  </div>
+<!-- call contacts end -->
+<!-- message -->
+<div id="messageApp" class="message">
+    <div class="message-content">
+       Deleted 14 Conversations
+       <div class="addConvo">
+    <img onclick="openErrorMessage()" src="icons/addConvo.png" />
+       </div>
+  <div class="exitMessage">
+    <img onclick="backMessage()" src="icons/back.png" />
+  </div>
+      <div id="messageerrorid" class="messageerror">
+      <p>Please insert a SIM card</p>
+    <img onclick="closeErrorMessage()" src="icons/back.png" />
+      </div>
+    </div>
+</div>
+<!-- search -->
+<div id="browser" class="blurry-div">
+    <div class="search-content">
+    <div>
+<img onclick="closeBrowser()" class="blurback" src="icons/blackback.png" />
+    </div><br />
+    <div class="browserName">
+<p style="color: #4580F4;">G</p>
+<p style="color: #E02F35;">o</p>
+<p style="color: #FBC500;">o</p>
+<p style="color: #4580F4;">g</p>
+<p style="color: #35BD4F;">o</p>
+<p style="color: #E02F35;">l</p>
+    </div>
+    
+<div class="searchBar">
+    <input type="text" id="inputField" placeholder="Type something..." onkeydown="handleKeyPress(event)">
+</div>
+    </div>
+</div>
+      <!-- goofy ahh social media app -->
+<div id="pageSocialApp" class="socialAppPage">
+    <div class="socialApp">
+<img class="backSocial" onclick="closeSocialApp()" src="icons/back2.png" />
+<img class="logoSocial" src="icons/social.png" alt="" />
+
+
+<div class="logoName">
+  <ul>
+      <li>S</li>
+      <li>o</li>
+      <li>c</li>
+      <li>i</li>
+      <li>a</li>
+      <li>l</li>
+      <li>i</li>
+      <li>z</li>
+      <li>e</li>
+  </ul>
+</div>
+
+
+
+    </div>
+<div class="socialAppContent">
+    
+<div class="firstPost">
+    <div class="firstAccount">
+        <img class="pfp1" src="pfp/pfp1.png" />
+        Akuma
+    </div>
+    <div class="PostContent">
+        <img class="pic1" src="posts/post1.png" />
+    </div>
+    How do I look?
+    <div class="likeCommentShare">
+        
+    <p onclick="socialError()">Like</p>
+    <p onclick="socialError()">Comment</p>
+    <p onclick="socialError()">Share</p>
+    
+    </div>
+    <div id="showSocialError" class="socialErrorStyle">
+        <img onclick="hideSocialError()" src="icons/back.png" />
+        <p>Please create an account</p>
+    </div>
+</div>
+    <!-- second post -->
+<div class="firstPost">
+    <div class="firstAccount">
+        <img class="pfp1" src="pfp/pfp2.png" />
+        Arthur
+    </div>
+    <div class="PostContent">
+        <img class="pic2" src="posts/post2.png" />
+    </div>
+    when I stop trying to look cute
+    <div class="likeCommentShare">
+        
+    <p onclick="socialError()" class="like">Like</p>
+    <p onclick="socialError()">Comment</p>
+    <p onclick="socialError()" class="share">Share</p>
+    
+    </div>
+    <div id="showSocialError" class="socialErrorStyle">
+        <img onclick="hideSocialError()" src="icons/back.png" />
+        <p>Please create an account</p>
+    </div>
+</div>
+    <!-- third post -->
+<div class="firstPost">
+    <div class="firstAccount">
+        <img class="pfp1" src="pfp/pfp3.png" />
+        Dazai
+    </div>
+    <div class="PostContent">
+        <img class="pic3" src="posts/post3.png" />
+    </div>
+    Me and my old friend
+    <div class="likeCommentShare">
+        
+    <p onclick="socialError()" class="like">Like</p>
+    <p onclick="socialError()">Comment</p>
+    <p onclick="socialError()" class="share">Share</p>
+    
+    </div>
+    <div id="showSocialError" class="socialErrorStyle">
+        <img onclick="hideSocialError()" src="icons/back.png" />
+        <p>Please create an account</p>
+    </div>
+</div>
+    <!-- more posts here -->
+    
+    
+    <!-- end posts here -->
+    <p class="socialErrorBottom">Failed to load more posts</p>
+</div>
+</div>
+
+<!-- extra apps --> <!-- cookie app -->
+<div class="cookie">
+    <img onclick="runCookie()" src="MiniGames/cookie/icons/appicon.png"/> <br />
+    <p>Cookie clicker</p>
+</div>
+<div id="cookieGame" class="cookieStyle">
+        <div class="gameControlsBottom">
+<nav>
+        <a class="CookieStart" href="#" onclick="changeContentCookie('MiniGames/cookie/index.html')">Start/Restart</a>
+    <a href="#" onclick="closeCookie()">Go Back</a>
+</nav>
+        </div>
+<div class="cookie-middle">
+    <div id="cookie-game">
+        <iframe id="cookie-frame" width="100%" height="100%" frameborder="0"></iframe>
+   </div>
+</div>
+   </div>
+                <!-- mist app -->
+<div class="mistapp">
+    <img onclick="runMist()" src="MiniGames/mist/logo/applogo.png"/> <br />
+    <p>Memory Mist</p>
+</div>
+<div id="mistGame" class="mistStyle">
+        <div class="gameControlsBottom">
+<nav>
+        <a class="mistStart" href="#" onclick="changeContentMist('MiniGames/mist/index.html')">Start/Restart</a>
+    <a href="#" onclick="closeMist()">Go Back</a>
+</nav>
+        </div>
+<div class="mist-middle">
+    <div id="mist-game">
+        <iframe id="mist-frame" width="100%" height="100%" frameborder="0"></iframe>
+   </div>
+</div>
+   </div>
+              <!-- whac-a-mole -->
+<div class="moleapp">
+    <img onclick="runMole()" src="MiniGames/mole/logo/appicon.png"/> <br />
+    <p>Whac A Mole</p>
+</div>
+<div id="moleGame" class="moleStyle">
+        <div class="gameControlsBottom">
+<nav>
+        <a class="moleStart" href="#" onclick="changeContentMole('MiniGames/mole/index.html')">Start/Restart</a>
+    <a href="#" onclick="closeMole()">Go Back</a>
+</nav>
+        </div>
+<div class="mole-middle">
+    <div id="mole-game">
+        <iframe id="mole-frame" width="100%" height="100%" frameborder="0"></iframe>
+   </div>
+</div>
+   </div>
+<!-- all ends here -->
+<div class="dock">
+  <div class="mid">
+      <nav class="docnav">
+    <img onclick="phonebutton()" class="docpic" src="icons/phone.png"/>
+    <img onclick="messagebutton()" class="docpic" src="icons/message.png"/>
+    <img onclick="openBrowser()" class="docpic" src="icons/internet.png"/>
+    <img onclick="openSocialApp()" class="docpic" src="icons/social.png"/>
+      </nav>
+  </div>
+</div>
+<script src="script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,761 @@
+                                   /*Layout style*/
+
+
+body {
+    font-family: Arial, Sans-Serif;
+    background-image: url('icons/background.png');
+}
+
+.music-player {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 100%;
+    left: -10px;
+}
+
+.music-player button {
+    background-color: white;
+    color: black;
+    border: none;
+    width: 60px;
+    height: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 38px;
+    left: 0;
+    border: 1px solid #888;
+    background-color: #0E141F;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+}
+
+.popup-content {
+    padding: 20px;
+    color: white;
+}
+
+.close {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    top: 40px;
+    left: 0px;
+}
+
+.navbar {
+    background-color: black;
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.navbar p {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.navRight {
+    position: fixed;
+    right: 5px;
+    top: 5px;
+}
+
+.battery {
+    position: fixed;
+    top: 0px;
+    right: 5px;
+    height: 40px;
+    width: 40px;
+}
+
+.dock {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+}
+
+.docpic {
+    height: 80px;
+    width: 80px;
+    align-items: center;
+    display: inline-block;
+}
+
+.mid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wifi {
+    position: fixed;
+    top: 5px;
+    right: 40px;
+    height: 30px;
+    width: 30px;
+}
+
+.docnav {
+    border: 4px solid #485A6C;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px black;
+}
+
+.date {
+    width: 100%;
+    position: fixed;
+    top: 60px;
+    left: 0px;
+}
+
+.date h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Monospace;
+    font-size: 40px;
+    color: white;
+}
+
+.weather {
+    width: 100%;
+    position: fixed;
+    top: 120px;
+    left: 0px;
+}
+
+.weather p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Monospace;
+    color: white;
+}
+
+
+                                    /*Phone style*/
+
+
+.contacts {
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    left: 0;
+}
+
+.contacts div {
+    padding: 40px 0;
+}
+
+.contacts div p {
+    color: white;
+    font-size: 20px;;
+}
+
+.errorbottom {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactnames {
+    position: fixed;
+    left: 10;
+}
+.contacttimes {
+    position: fixed;
+    right: 0;
+}
+
+.contactinfo {
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    border: 1px solid #888;
+    background-color: #000;
+    z-index: 1001;
+    width: 100%;
+    height: 300px;
+    color: white;
+}
+
+.closecontact {
+    position: fixed;
+    left: 5px;
+    bottom: 10px;
+    height: 40px;
+    widows: 40px;
+}
+
+.contactpic {
+    height: 100px;
+    width: 100px;
+}
+
+.contactPicHolder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 300px;
+    left: 0;
+}
+
+.nameUnderPic {
+    font-size: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 260px;
+}
+
+.contactnumber {
+    font-size: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 240px;
+}
+
+.underNumber {
+    width: 100%;
+    position: fixed;
+    bottom: 100px;
+}
+
+.underNumber p {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.callerror {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    z-index: 2000;
+    border-radius: 10px;
+    height: 65px;
+    width: 300px;
+}
+
+.phonePopup {
+    display: none;
+    position: fixed;
+    top: 38px;
+    left: 0;
+    border: 2px solid #0E141F;
+    background-color: #0E141F;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+}
+
+.phone-content {
+    padding: 20px;
+    color: white;
+}
+
+.callerror img {
+    height: 40px;
+    width: 40px;
+}
+
+.callerror p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+                                  /*Message style*/
+
+
+.message {
+    display: none;
+    position: fixed;
+    top: 38px;
+    left: 0;
+    border: 1px solid #888;
+    background-color: #201F24;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    color: #fff;
+}
+
+.addConvo {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.addConvo img {
+    height: 50px;
+    width: 50px;
+}
+ 
+.exitMessage {
+    position: fixed;
+    top: 40px;
+    left: 0px;
+}
+
+.exitMessage img {
+    height: 40px;
+    width: 40px;
+}
+
+.messageerror {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    z-index: 2000;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.messageerror img {
+    height: 40px;
+    width: 40px;
+}
+
+.messageerror p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+                           /* search app/browser */
+
+
+.blurry-div {
+    display: none;
+    position: fixed;
+    top: 37;
+    left: 0;
+    border: 1px solid #888;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    text-align: center;
+}
+
+.blurback {
+    height: 40px;
+    width: 40px;
+    float: left;
+}
+
+.blurText {
+    font-size: 20px;
+    color: #201F24;
+    position: fixed;
+    top: 70px;
+    left: 70px;
+}
+
+.searchBar {
+    position: fixed;
+    top: 237px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.searchBar input {
+    width: 70%;
+    height: 50px;
+    border: 0;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.webPages {
+    display: none;
+    background-color: black;
+    color: white;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: -37px;
+    left: -1px;
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.browserName {
+    width: 100%;
+    position: fixed;
+    top: 50px;
+    height: 100px;
+}
+
+.browserName p {
+    display: inline-block;
+    text-align: center;
+    font-family: 'Font Name', serif;
+    font-size: 70px;
+}
+
+#content-div {
+    width: 350px;
+    height: 750px;
+}
+
+.gameMiddle{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+                             /* social app style */
+
+
+.socialAppPage {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 33px;
+    left: 0;
+    background-color: #141318;
+    height: 100%;
+    z-index: 1000;
+    color: white;
+}
+
+.socialApp {
+    color: black;
+    font-style: italic;
+    position: fixed;
+    top: 33px;
+    background-color: #201F24;
+    width: 100%;
+    right: 0px;
+}
+
+.socialApp .backSocial {
+    float: right;
+    height: 50px;
+    width: 50px;
+}
+
+.socialApp .logoSocial {
+    float: left;
+    height: 50px;
+    width: 50px;
+}
+
+.socialApp .logoName ul li {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 5px;
+    color: white;
+    font-style: italic, bold;
+    font-weight: 300;
+}
+
+.socialAppContent {
+    position: fixed;
+    top: 87px;
+    left: 0px;
+    overflow-y: auto;
+    height: 93%;
+    width: 100%;
+}
+
+.pfp1 {
+    height: 30px;
+    width: 30px;
+}
+
+.PostContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pic1 {
+    width: 240px;
+    height: 320px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.likeCommentShare {
+    background-color: black;
+    color: white;
+}
+
+.likeCommentShare p {
+    display: inline-block;
+    border: 4px solid #141318;
+    border-radius: 5px;
+    background-color: #141318;
+    border-width: 10px;
+    margin-right: 50px;
+}
+
+.socialErrorStyle {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    z-index: 2000;
+    border-radius: 10px;
+    height: 65px;
+    width: 300px;
+}
+
+.socialErrorStyle img {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.socialErrorStyle p {
+    text-align: center;
+    width: 100%;
+}
+
+.pic2 {
+    height: 320px;
+    width: 320px;
+}
+
+.pic3 {
+    height: 320px;
+    width: 180px;
+}
+
+.socialErrorBottom {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+/*                                    extra apps*/
+
+
+.cookie {
+    position: fixed;
+    bottom: 160px;
+    left: 40px;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+
+.cookie img {
+    height: 70px;
+    width: 70px;
+}
+
+.cookieStyle {
+    display: none;
+    color: white;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+#cookie-game {
+    width: 350px;
+    height: 700px;
+    position: fixed;
+    bottom: 0px;
+}
+
+.cookie-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameControlsBottom {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+}
+
+.gameControlsBottom nav {
+    text-align: center;
+}
+
+.gameControlsBottom a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    padding: 20px;
+}
+
+
+/* memory mist app */
+
+
+.mistapp {
+    position: fixed;
+    bottom: 160px;
+    left: 160px;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+
+.mistapp img {
+    height: 70px;
+    width: 70px;
+}
+
+.mistStyle {
+    display: none;
+    color: white;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.mist-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mist-game {
+    position: fixed;
+    bottom: 0px;
+    width: 405px;
+    height: 720px;
+}
+
+
+/* mole game */
+
+.moleapp {
+    position: fixed;
+    bottom: 160px;
+    left: 280px;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+
+.moleapp img {
+    height: 70px;
+    width: 70px;
+}
+
+.moleStyle {
+    display: none;
+    color: white;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.mole-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mole-game {
+    position: fixed;
+    bottom: 0px;
+    width: 400px;
+    height: 720px;
+}
